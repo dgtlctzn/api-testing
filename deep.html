@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+    <script>
+
+    // this one is amazing but it takes fooooorever
+
+    var textInputOne = "My name is Xan. I am a tattoo artist based out of Detroit."
+    var textInputTwo = "My name is Dan. I am a software developer from Sante Fe, New Mexico."
+    var textInputThree = "My name is Caroline. I am a graphic designer at a trendy startup in Los Angeles."
+
+      deepai.setApiKey("d4869168-e2b9-44ec-8311-407fa123a5ca");
+
+      (async function () {
+        var resp = await deepai.callStandardApi("text-generator", {
+          text: textInputOne,
+        });
+        console.log(resp);
+      })();
+    </script>
+  </body>
+</html>
